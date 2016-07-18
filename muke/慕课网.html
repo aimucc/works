@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>慕课网</title>
+	<link rel="stylesheet" type="text/css" href="muke.css">
+	<link rel="stylesheet" href="js/mf-pattern/mF_fancy.css" />
+	<script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>
+	<script type="text/javascript" src="js/setHomeSetFav.js"></script>
+	<script type="text/javascript" src="js/mf-pattern/mF_fancy.js"></script>
+	<script type="text/javascript">
+	window.onload=function(){
+		myFocus.set({
+			id:'picbox',
+		});
+		var demo = document.getElementById("demo");
+		var demo1 = document.getElementById("demo1");
+		var demo2 = document.getElementById("demo2");
+		var speed = 50;
+		demo2.innerHTML = demo1.innerHTML;
+
+		function scrollUp() {
+			if (demo.scrollTop >= demo2.offsetHeight) {
+				//滚动至demo1与demo2交界
+				demo.scrollTop -= demo1.offsetHeight;
+				//跳到最顶端
+			}
+
+			else {
+				demo.scrollTop++;
+			}
+
+		}
+
+		var myScroll = setInterval(scrollUp, speed);
+		demo.onmouseout = function() {
+			myScroll = setInterval(scrollUp, speed);
+		}
+
+		demo.onmouseover = function() {
+			clearInterval(myScroll);
+		}
+				
+	}
+	</script>
+</head>
+<body>
+	<div class="bgtop">
+		<ul>
+			<li><a href="#">设为首页</a></li>
+			<li><a href="#">加入收藏</a></li>
+			<li><a href="#">练习我们</a></li>
+		</ul>
+	</div>
+	<div class="nav">
+		<div class="logo"><img src="images/logo.jpg" alt="" /></div>
+		<div class="nav-right">
+			<ul>
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">产品特色</a></li>
+				<li><a href="#">产品中心</a></li>
+				<li><a href="#">解决方案</a></li>
+				<li><a href="#">帮助中心</a></li>
+				<li><a href="#">关于我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="picbox" id="picbox">
+		<div class="loading"><img src="images/loading.gif" alt="图片正在加载" /></div>
+		<div class="pic">
+			<ul>
+				<li><a href="#"><img src="images/ad2.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="images/ad3.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="images/ad4.jpg" alt="" /></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="new">
+		<div class="news-left">滚动新闻</div>
+		<div class="news-right" id="demo">
+			<ul id='demo1'>
+				<li><a href="#">这是新闻</a></li>
+				<li><a href="#">这是新闻</a></li>
+				<li><a href="#">这是新闻</a></li>
+				<li><a href="#">这是新闻</a></li>
+				<li><a href="#">这是新闻</a></li>
+			</ul>
+			<ul id="demo2">
+				
+			</ul>
+		</div>
+	</div>
+	<div class="works">
+		<div ><a href="#"><img src="images/bootstrap.jpg" alt="" /></a><p>玩转BootStrap</p></div>
+		<div class="center"><a href="#"><img src="images/企业案例.jpg" alt="" /></a><p>企业网站案例</p></div>
+		<div ><a href="#"><img src="images/JavaScript基础.jpg" alt="" /></a><p>javascript基础</p></div>
+	</div>
+	<div class="xinxi">
+		<div class="news">
+			<span class="title" >新闻中心</span>
+			<div>
+				<ul>
+					<li>
+						<span>7月<br />15日</span>
+						<div>
+							<a href="">学习计划之Android攻城狮初养成</a>
+							<p>学习计划之Android攻城狮初养成学习计划之Android攻城狮初养成</p>
+						</div>
+					</li>
+					<li>
+						<span>7月<br />15日</span>
+						<div>
+							<a href="">学习计划之Android攻城狮初养成</a>
+							<p>学习计划之Android攻城狮初养成学习计划之Android攻城狮初养成</p>
+						</div>
+					</li>
+					<li>
+						<span>7月<br />15日</span>
+						<div>
+							<a href="">学习计划之Android攻城狮初养成</a>
+						<p>学习计划之Android攻城狮初养成学习计划之Android攻城狮初养成</p>
+						</div>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="activity">
+			<span class="title">热门活动</span>
+			<div class="pic-1"><img src="images/53edacdd0001b8e804820302.jpg"></div>
+			<div>
+				<ul>
+					<li>学习计划之Android攻城狮初养成</li>
+					<li>学习计划之Android攻城狮初养成</li>
+					<li>学习计划之Android攻城狮初养成</li>
+					<li>学习计划之Android攻城狮初养成</li>
+					<li>学习计划之Android攻城狮初养成</li>
+				</ul>
+			</div>	
+		</div>
+		<div class="contact">
+			<span class="title">练习我们</span>
+			<p>讲师招募<br />周同学<br />电话：12345678912 <br />QQ：123456789 <br />E-mali：123@qq.com</p> 
+			<p>讲师招募<br />周同学<br />电话：12345678912 <br />QQ：123456789 <br />E-mali：123@qq.com</p> 
+		</div>
+	</div>
+	<footer>© 2016 imooc.com  京ICP备13046642号</footer>
+</body>
+</html>
